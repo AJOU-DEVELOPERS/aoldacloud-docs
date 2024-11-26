@@ -1,30 +1,86 @@
-/* 공통 */
-.heroBanner {
+.navbar {
+  display: none !important;
+}
+
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 3rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: calc(100% - 6rem);
+  margin: 2rem auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 2rem;
-  background: black;
+  justify-content: space-around;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #005aa7;
+  cursor: pointer;
+}
+
+.navItems {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #005aa7;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: none;
+}
+
+.consoleButton {
+  padding: 0.5rem 1.5rem;
+  background: #005aa7;
   color: white;
-  position: relative;
-  height: 70vh;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.consoleButton:hover {
+  background: #004d8c;
+  text-decoration: none;
+}
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background: linear-gradient(90deg, #0067c1 0%, #003764 100%);
+  color: white;
+  width: calc(100% - 6rem);
+  margin: 0 auto;
 }
 
 .heroContent {
-  max-width: 50%;
+  max-width: 600px;
 }
 
 .heroTitle {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: bold;
 }
 
 .heroSubtitle {
-  margin: 1rem 0;
-}
-
-.heroImage {
-  width: 40%;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .buttons {
@@ -32,59 +88,172 @@
   gap: 1rem;
 }
 
-.button {
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
+.primaryButton, .secondaryButton {
+  padding: 0.8rem 1.5rem;
   border-radius: 5px;
-  transition: background 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: #005aa7;
+  border: 2px solid #005aa7;
+  cursor: pointer;
 }
 
-.primary {
-  background: gold;
-  color: black;
+.primaryButton:hover, .secondaryButton:hover {
+  text-decoration: none;
 }
 
-.secondary {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
+.heroImage {
+  width: 350px;
+  height: auto;
 }
 
 .quickOverview {
+  padding: 4rem 3rem;
+  width: calc(80%);
+  margin: 0 auto;
   text-align: center;
-  padding: 2rem;
+}
+
+.quickOverview h2,
+.quickOverview p {
+  text-align: center;
 }
 
 .cardContainer {
   display: flex;
   gap: 2rem;
-  justify-content: center;
+  margin-top: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: 1rem;
+  scrollbar-color: #ececec #ffffff;
+}
+
+.cardContainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cardContainer::-webkit-scrollbar-thumb {
+  background-color: #005aa7;
+  border-radius: 10px;
+}
+
+.cardContainer::-webkit-scrollbar-track {
+  background: #ffffff;
 }
 
 .card {
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: left;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUp 1.5s ease forwards;
+}
+
+.card .imagePlaceholder {
+  width: 120px;
+  height: 120px;
+  background-color: #ededed;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card a {
+  text-decoration: underline;
+  color: #005aa7;
+  margin-top: auto;
 }
 
 .cloudHistory {
-  padding: 2rem;
+  padding: 4rem 3rem;
+  background: #f9f9f9;
+  width: calc(80%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cloudHistory h2,
+.cloudHistory p {
   text-align: center;
 }
 
 .historyGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: 1rem;
+  scrollbar-color: #ececec #ffffff;
+}
+
+.historyGrid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.historyGrid::-webkit-scrollbar-thumb {
+  background-color: #005aa7;
+  border-radius: 10px;
+}
+
+.historyGrid::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.historyGrid .card {
+  flex: 0 0 25%;
+  aspect-ratio: 3 / 5;
+  max-width: 200px;
 }
 
 .footer {
-  background: #333;
+  background: #004d8c;
   color: white;
-  padding: 2rem;
+  padding: 2rem 3rem;
+  width: calc(100% - 6rem);
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+
+.footerLeft {
+  flex: 1;
+}
+
+.footerRight {
+  flex: 2;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.2rem;
+}
+
+.footerItem {
+  font-size: 1rem;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
