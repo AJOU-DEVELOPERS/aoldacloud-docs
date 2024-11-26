@@ -1,0 +1,139 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ajou-primary: #005BAC;
+  --ajou-secondary: #00205B;
+  --ajou-accent: #FFD100;
+  --ajou-gray: #F5F5F5;
+  --ajou-text: #333333;
+  
+  --ifm-color-primary: var(--ajou-primary);
+  --ifm-color-primary-dark: #004d8f;
+  --ifm-color-primary-darker: #004785;
+  --ifm-color-primary-darkest: #003a6e; 
+  --ifm-color-primary-light: #0069c9;
+  --ifm-color-primary-lighter: #006fd3;
+  --ifm-color-primary-lightest: #007cea;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-navbar-height: 5rem;
+  --ifm-font-size-base: 16px;
+  --ifm-heading-font-weight: 600;
+  --ifm-navbar-padding-vertical: 1rem;
+  --ifm-navbar-padding-horizontal: max(1rem, calc((100% - var(--site-width)) / 2));
+  --site-width: min(100%, 1920px);
+  --content-width: min(100%, 1400px);
+  --content-padding: max(1rem, calc((100% - var(--content-width)) / 2));
+  --section-padding: clamp(3rem, 8vw, 6rem);
+  
+  /* 반응형 폰트 크기 */
+  --font-size-xs: clamp(0.75rem, 2vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 2vw, 1rem);
+  --font-size-base: clamp(1rem, 2vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 2vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 3vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 4vw, 2rem);
+  --font-size-3xl: clamp(2rem, 5vw, 3rem);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ajou-primary: #2196F3;
+  --ajou-secondary: #1976D2;
+  --ajou-accent: #FFC107;
+  --ajou-gray: #212121;
+  --ajou-text: #FFFFFF;
+  --ifm-color-primary: var(--ajou-primary);
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* 스크롤바 제거를 위한 전역 스타일 */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+  padding: var(--ifm-navbar-padding-vertical) var(--ifm-navbar-padding-horizontal);
+}
+
+.navbar__inner {
+  width: 100%;
+  max-width: var(--site-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+}
+
+.navbar__brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ajou-primary);
+}
+
+.navbar__items--center {
+  justify-content: center;
+}
+
+.navbar__items {
+  gap: 2rem;
+}
+
+.navbar__link {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navbar__link--active {
+  font-weight: 600;
+}
+
+.navbar-console-link {
+  background: var(--ajou-accent);
+  color: var(--ajou-secondary) !important;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.navbar-console-link:hover {
+  background: var(--ajou-secondary);
+  color: var(--ajou-accent) !important;
+}
+
+/* 기본 레이아웃 컨테이너 */
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+/* 섹션 공통 스타일 */
+.section {
+  padding: var(--section-padding) 0;
+}
+
+@media screen and (max-width: 996px) {
+  :root {
+    --ifm-navbar-padding-horizontal: 1rem;
+  }
+  
+  .navbar__items {
+    gap: 1rem;
+  }
+}
