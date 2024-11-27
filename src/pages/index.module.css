@@ -24,6 +24,10 @@
   cursor: pointer;
 }
 
+.logo:hover {
+  text-decoration: none;
+}
+
 .navItems {
   display: flex;
   gap: 3rem;

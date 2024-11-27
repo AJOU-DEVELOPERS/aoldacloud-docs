@@ -9,7 +9,7 @@ import Heading from '@theme/Heading';
 function CustomHeader() {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>AOLDACLOUD</div>
+      <Link to ="/" className={styles.logo}>AOLDACLOUD</Link>
       <nav className={styles.navItems}>
         <a href="#intro">소개</a>
         <a href="#services">서비스</a>
