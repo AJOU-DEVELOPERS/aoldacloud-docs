@@ -130,7 +130,7 @@ export default function Home(): JSX.Element {
         <CloudHistory />
         <footer className={styles.footer}>
           <div className={styles.footerLeft}>
-            <h4>AOLDACLOUD</h4>
+            <h3>AOLDACLOUD</h3>
             <p>© 2023–2024</p>
             <p>Privacy — Terms</p>
           </div>
