@@ -5,23 +5,8 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Heading from '@theme/Heading';
-
-function CustomHeader() {
-  return (
-    <header className={styles.header}>
-      <Link to ="/" className={styles.logo}>AOLDACLOUD</Link>
-      <nav className={styles.navItems}>
-        <a href="#intro">소개</a>
-        <a href="#services">서비스</a>
-        <a href="#guide">길라잡이</a>
-        <a href="#blog">블로그</a>
-      </nav>
-      <a href="/console" className={styles.consoleButton}>
-        콘솔 이동하기
-      </a>
-    </header>
-  );
-}
+import CustomHeader from "../components/HomepageFeatures/HomepageFeatures/CustomHeader";
+import CustomFooter from "../components/HomepageFeatures/HomepageFeatures/CustomFooter";
 
 function HomepageHeader() {
   return (
@@ -128,19 +113,7 @@ export default function Home(): JSX.Element {
         <HomepageHeader />
         <QuickOverview />
         <CloudHistory />
-        <footer className={styles.footer}>
-          <div className={styles.footerLeft}>
-            <h3>AOLDACLOUD</h3>
-            <p>© 2023–2024</p>
-            <p>Privacy — Terms</p>
-          </div>
-          <div className={styles.footerRight}>
-            <div className={styles.footerGrid}>
-              <div className={styles.footerItem}>Product</div>
-              <div className={styles.footerItem}>Feature</div>
-            </div>
-          </div>
-        </footer>
+        <CustomFooter />
       </main>
     </Layout>
   );
