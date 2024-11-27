@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../pages/index.module.css";
+import styles from "./CustomFooter.module.css";
 
 export default function CustomFooter() {
   return (

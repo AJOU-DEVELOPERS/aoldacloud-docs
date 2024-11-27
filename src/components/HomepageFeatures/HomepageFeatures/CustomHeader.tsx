@@ -1,6 +1,6 @@
 import React from "react";
 import Link from '@docusaurus/Link';
-import styles from "../../../pages/index.module.css";
+import styles from "./CustomHeader.module.css";
 
 export default function CustomHeader() {
   return (
