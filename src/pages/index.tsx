@@ -1,12 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Layout from "@theme/Layout";
 import styles from "./index.module.css";
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Heading from '@theme/Heading';
-import CustomHeader from "../components/HomepageFeatures/HomepageFeatures/CustomHeader";
-import CustomFooter from "../components/HomepageFeatures/HomepageFeatures/CustomFooter";
 
 function HomepageHeader() {
   return (
@@ -17,12 +12,12 @@ function HomepageHeader() {
           아주대학교 학생 어플리케이션 운영을 위한 프라이빗 클라우드
         </p>
         <div className={styles.buttons}>
-          <a href="/guide" className={styles.primaryButton}>
+          <Link to="/guide" className={styles.primaryButton}>
             가이드 이동하기
-          </a>
-          <a href="/tutorial" className={styles.secondaryButton}>
+          </Link>
+          <Link to="/tutorial" className={styles.secondaryButton}>
             튜토리얼 이동하기
-          </a>
+          </Link>
         </div>
       </div>
       <img
@@ -43,22 +38,22 @@ function QuickOverview() {
         <div className={styles.card}>
           <h3>아올다클라우드의 가상머신을 이용하는 방법</h3>
           <p>여기 내용은 컨텐츠 소개글입니다... (서비스 가이드로 이동)</p>
-          <a href="/guide">Read More</a>
+          <Link to="/guide">Read More</Link>
         </div>
         <div className={styles.card}>
           <h3>아올다클라우드를 이용한 웹 서비스 배포하기</h3>
           <p>여기 내용은 컨텐츠 소개글입니당.... (길라잡이 문서로 이동)</p>
-          <a href="/tutorial">Read More</a>
+          <Link to="/tutorial">Read More</Link>
         </div>
         <div className={styles.card}>
           <h3>클라우드 데이터베이스 사용해보기</h3>
           <p>여기 내용은 데이터베이스 사용 가이드에요.... (데이터베이스 문서로 이동)</p>
-          <a href="/database">Read More</a>
+          <Link to="/database">Read More</Link>
         </div>
         <div className={styles.card}>
           <h3>API 서버 배포하기</h3>
           <p>여기 내용은 API 서버 배포 과정입니다.... (배포 가이드로 이동)</p>
-          <a href="/api">Read More</a>
+          <Link to="/api">Read More</Link>
         </div>
       </div>
     </section>
@@ -89,7 +84,7 @@ function CloudHistory() {
             <div className={styles.card} key={index}>
               <div className={styles.imagePlaceholder}></div>
               <h3>{card.title}</h3>
-              <a href={card.link}>See More ›</a>
+              <Link to={card.link}>See More ›</Link>
             </div>
           ))}
         </div>
@@ -99,21 +94,12 @@ function CloudHistory() {
 }
 
 export default function Home(): JSX.Element {
-  useEffect(() => {
-    const navbar = document.querySelector(".navbar") as HTMLElement;
-    if (navbar) {
-      navbar.style.display = "none";
-    }
-  }, []);
-
   return (
-    <Layout noFooter>
-      <CustomHeader />
+    <Layout>
       <main>
         <HomepageHeader />
         <QuickOverview />
         <CloudHistory />
-        <CustomFooter />
       </main>
     </Layout>
   );
