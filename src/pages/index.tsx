@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@theme/Layout";
 import styles from "./index.module.css";
 import Link from '@docusaurus/Link';
+import cardsData from '@site/src/data/cards.json';
 
 function HomepageHeader() {
   return (
@@ -35,43 +36,19 @@ function QuickOverview() {
       <h2>빠르게 돞아보기</h2>
       <p>클라우드를 사용하는 다양한 시나리오로 소개합니다.</p>
       <div className={styles.cardContainer}>
-        <div className={styles.card}>
-          <h3>아올다클라우드의 가상머신을 이용하는 방법</h3>
-          <p>여기 내용은 컨텐츠 소개글입니다... (서비스 가이드로 이동)</p>
-          <Link to="/guide">Read More</Link>
-        </div>
-        <div className={styles.card}>
-          <h3>아올다클라우드를 이용한 웹 서비스 배포하기</h3>
-          <p>여기 내용은 컨텐츠 소개글입니당.... (길라잡이 문서로 이동)</p>
-          <Link to="/tutorial">Read More</Link>
-        </div>
-        <div className={styles.card}>
-          <h3>클라우드 데이터베이스 사용해보기</h3>
-          <p>여기 내용은 데이터베이스 사용 가이드에요.... (데이터베이스 문서로 이동)</p>
-          <Link to="/database">Read More</Link>
-        </div>
-        <div className={styles.card}>
-          <h3>API 서버 배포하기</h3>
-          <p>여기 내용은 API 서버 배포 과정입니다.... (배포 가이드로 이동)</p>
-          <Link to="/api">Read More</Link>
-        </div>
+        {cardsData.quickOverview.map((card, index) => (
+          <div className={styles.card} key={index}>
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+            <Link to={card.link}>Read More</Link>
+          </div>
+        ))}
       </div>
     </section>
   );
 }
 
 function CloudHistory() {
-  const cards = [
-    { title: "아올다클라우드 인프라 구성", link: "/infra" },
-    { title: "온프레미스 환경에서 개발 및 운영 환경 구축하기", link: "/onprem" },
-    { title: "쿠버네티스를 네이티브하게 파이프라인 도구 운영하기", link: "/k8s" },
-    { title: "대학과 학생을 대상으로 협조 세션 운영하기", link: "/sessions" },
-    { title: "클라우드 스토리지 솔루션 활용하기", link: "/storage" },
-    { title: "클라우드 보안 강화하기", link: "/security" },
-    { title: "DevOps와 클라우드 운영 사례", link: "/devops" },
-    { title: "고가용성 클라우드 서비스 운영하기", link: "/highavailability" },
-  ];
-
   return (
     <section className={styles.cloudHistory}>
       <div className={styles.container}>
@@ -80,7 +57,7 @@ function CloudHistory() {
           클라우드 개발을 위해 사용한 기술과 운영하면서 해결한 고민들을 글로 정리하여 공유합니다.
         </p>
         <div className={styles.historyGrid}>
-          {cards.map((card, index) => (
+          {cardsData.cloudHistory.map((card, index) => (
             <div className={styles.card} key={index}>
               <div className={styles.imagePlaceholder}></div>
               <h3>{card.title}</h3>
