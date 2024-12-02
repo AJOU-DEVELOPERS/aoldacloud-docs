@@ -8,7 +8,7 @@ function HomepageHeader() {
   return (
     <section className={styles.heroSection}>
       <div className={styles.heroContent}>
-        <h1 className={styles.heroTitle}>아주대학교 학생 클라우드</h1>
+        <h1 className={styles.heroTitle}>AoldaCloud</h1>
         <p className={styles.heroSubtitle}>
           아주대학교 학생 어플리케이션 운영을 위한 프라이빗 클라우드
         </p>

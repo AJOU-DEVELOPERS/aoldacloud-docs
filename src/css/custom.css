@@ -6,6 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+
   --ajou-primary: #005BAC;
   --ajou-secondary: #00205B;
   --ajou-accent: #FFD100;
@@ -27,7 +28,7 @@
   --ifm-navbar-padding-vertical: 1rem;
   --ifm-navbar-padding-horizontal: max(1rem, calc((100% - var(--site-width)) / 2));
   --site-width: min(100%, 1920px);
-  --content-width: min(100%, 1400px);
+  --content-width: min(100%, 1500px);
   --content-padding: max(1rem, calc((100% - var(--content-width)) / 2));
   --section-padding: clamp(3rem, 8vw, 6rem);
   
@@ -127,6 +128,7 @@ html, body {
 .section {
   padding: var(--section-padding) 0;
 }
+
 
 @media screen and (max-width: 996px) {
   :root {

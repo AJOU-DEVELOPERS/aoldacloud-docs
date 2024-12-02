@@ -6,8 +6,8 @@ export default function FooterWrapper(): JSX.Element {
     <footer className={styles.footer}>
       <div className={styles.footerLeft}>
         <h3>AOLDACLOUD</h3>
-        <p>© 2023–2024</p>
-        <p>Privacy — Terms</p>
+        <p>© 2023 – 2024</p>
+        <p>Privacy - Terms</p>
       </div>
       <div className={styles.footerRight}>
         <div className={styles.footerGrid}>

@@ -4,17 +4,17 @@ import styles from "@site/src/components/HomepageFeatures/HomepageFeatures/Custo
 
 export default function NavbarWrapper(): JSX.Element {
   return (
-    <header className={styles.header}>
+    <header className={`navbar ${styles.header}`}>
       <Link to="/" className={styles.logo}>
         AOLDACLOUD
       </Link>
       <nav className={styles.navItems}>
-        <Link to="/guide">서비스 가이드</Link>
+        <Link to="/intro">소개</Link>
+        <Link to="/guide">가이드</Link>
         <Link to="/tutorial">길라잡이</Link>
-        <Link to="/database">데이터베이스</Link>
-        <Link to="/api">API 서버</Link>
+        <Link to="/blog">히스토리</Link>
       </nav>
-      <Link to="/console" className={styles.consoleButton}>
+      <Link to="https://console.aoldacloud.com" className={styles.consoleButton}>
         콘솔 이동하기
       </Link>
     </header>
