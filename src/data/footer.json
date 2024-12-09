@@ -1,0 +1,26 @@
+{
+  "company": {
+    "name": "AOLDACLOUD",
+    "copyright": "© 2023 – 2024",
+    "legal": "Privacy - Terms",
+    "contact": "contact@aolda.com"
+  },
+  "sections": [
+    {
+      "title": "Product",
+      "items": [
+        { "label": "Cloud Services", "href": "/products/cloud" },
+        { "label": "Security", "href": "/products/security" }
+      ]
+    },
+    {
+      "title": "Feature",
+      "items": [
+        { "label": "소개", "href": "/intro" },
+        { "label": "가이드", "href": "/guide" },
+        { "label": "길라잡이", "href": "/tutorial" },
+        { "label": "히스토리", "href": "/blog" }
+      ]
+    }
+  ]
+}

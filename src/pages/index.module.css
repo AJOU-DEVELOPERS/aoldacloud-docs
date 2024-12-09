@@ -175,3 +175,48 @@
     opacity: 1;
   }
 }
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footerItem {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ajou-primary);
+  margin-bottom: 1rem;
+}
+
+.footerLink {
+  display: block;
+  text-decoration: none;
+  color: var(--ajou-text);
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+  color: var(--ajou-primary);
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+}
