@@ -7,6 +7,6 @@ sync_to_github:
   script:
     - git remote set-url origin https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/AJOU-DEVELOPERS/aoldacloud-docs
     - git fetch --all
-    - git push --no-verify --mirror origin
+    - git push --no-thin --no-verify --mirror origin
   only:
     - schedules
