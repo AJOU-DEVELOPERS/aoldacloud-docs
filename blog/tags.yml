@@ -3,10 +3,10 @@ facebook:
   permalink: /facebook
   description: Facebook tag description
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+aolda:
+  label: Aolda
+  permalink: /aolda
+  description: 아올다클라우드에 직접 사용한 사례에 사용되는 태그
 
 docusaurus:
   label: Docusaurus

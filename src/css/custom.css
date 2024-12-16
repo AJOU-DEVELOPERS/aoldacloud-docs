@@ -27,8 +27,8 @@
   --ifm-heading-font-weight: 600;
   --ifm-navbar-padding-vertical: 1rem;
   --ifm-navbar-padding-horizontal: max(1rem, calc((100% - var(--site-width)) / 2));
-  --site-width: min(100%, 1920px);
-  --content-width: min(100%, 1200px);
+  --site-width: 100%;
+  --content-width: 95%;
   --content-padding: max(1rem, calc((100% - var(--content-width)) / 2));
   --section-padding: clamp(3rem, 8vw, 6rem);
   
