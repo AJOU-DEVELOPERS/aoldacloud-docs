@@ -4,8 +4,8 @@ stages:
 sync_to_github:
   stage: sync
   script:
+    - apt install git
     - git remote add github https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/AJOU-DEVELOPERS/aoldacloud-docs
-    
     - git fetch --all
     - git push --mirror github
   only:
