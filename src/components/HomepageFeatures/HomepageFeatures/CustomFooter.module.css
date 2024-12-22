@@ -1,30 +1,19 @@
 .footer {
   background-color: var(--ajou-primary);
   color: white;
-  padding: 4rem var(--content-padding);
+  padding: 4rem 8rem;
   width: 100%;
+  display: flex;
+  gap: 15rem;
+  justify-content: flex-start;
 }
 
 .footerLeft {
-  flex: 0 0 300px;
-  margin-bottom: 2rem;
-}
-
-.footerLeft h3 {
-  font-size: var(--font-size-xl);
-  color: white;
-  margin-bottom: 1rem;
-}
-
-.footerLeft p {
-  font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+  flex: 0 0 auto;
 }
 
 .footerRight {
-  flex: 1;
+  flex: 0 0 auto;
 }
 
 .footerGrid {
@@ -36,7 +25,7 @@
 .footerSection {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.75rem;
 }
 
 .footerItem {
