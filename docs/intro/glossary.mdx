@@ -3,45 +3,43 @@ title: 아올다클라우드 용어집
 description: 아올다클라우드에서 사용되는 주요 용어들을 설명합니다
 sidebar_position: 2
 sidebar_label: 용어집
+toc_min_heading_level: 2
+toc_max_heading_level: 2
 ---
 
 import styles from '@site/src/css/glossary.module.css';
 import glossaryData from '@site/src/data/glossary.json';
 
 <div className={styles.glossaryContainer}>
+  <div className={styles.glossaryHeader}>
+  </div>
 
-<div className={styles.glossaryHeader}>
-</div>
-
-{Object.entries(glossaryData.terms).map(([letter, terms]) => (
-  <>
-    <h2>{letter}</h2>
-    {terms.map((term) => (
-      <div className={styles.termGroup} key={term.title}>
-        <div className={styles.termTitle}>
-          {term.title}
-          <span className={styles.termEnglish}>({term.titleEnglish})</span>
+  {Object.entries(glossaryData.terms).map(([letter, terms]) => (
+    <div key={letter}>
+      <h2 className={styles.sectionHeader}>{letter}</h2>
+      {terms.map((term) => (
+        <div className={styles.termGroup} key={term.title}>
+          <div className={styles.termTitle}>
+            {term.title}
+            <span className={styles.termEnglish}>({term.titleEnglish})</span>
+          </div>
+          <div className={styles.termContent}>
+            <ul className={styles.termList}>
+              {term.descriptions.map((desc, index) => (
+                <li key={index}>{desc}</li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className={styles.termContent}>
-          <ul className={styles.termList}>
-            {term.descriptions.map((desc, index) => (
-              <li key={index}>{desc}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    ))}
-  </>
-))}
+      ))}
+    </div>
+  ))}
 
-<div className={styles.glossaryFooter}>
+  <div className={styles.glossaryFooter}>
+    ## 참고 사항
 
-## 참고 사항
-
-- 이 용어집은 지속적으로 업데이트됩니다
-- 용어에 대한 자세한 설명은 각 서비스 가이드를 참고해 주세요
-- 특정 용어에 대한 추가 설명이 필요한 경우 문의해 주세요
-
-</div>
-
+    - 이 용어집은 지속적으로 업데이트됩니다
+    - 용어에 대한 자세한 설명은 각 서비스 가이드를 참고해 주세요
+    - 특정 용어에 대한 추가 설명이 필요한 경우 문의해 주세요
+  </div>
 </div>
