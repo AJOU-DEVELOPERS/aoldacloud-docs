@@ -1,0 +1,140 @@
+.glossaryContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.glossaryHeader {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  text-align: center;
+}
+
+.glossaryHeader h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+.sectionHeader {
+  color: var(--ifm-color-primary);
+  font-size: 2.2rem;
+  margin: 3rem 0 2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-100);
+  position: relative;
+}
+
+.sectionHeader::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--ifm-color-primary);
+}
+
+.termGroup {
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  background: var(--ifm-background-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.termGroup:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.termTitle {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary-darker);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+}
+
+.termEnglish {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-left: 1rem;
+  padding: 0.3rem 0.8rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 20px;
+}
+
+.termContent {
+  background: var(--ifm-card-background-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.termList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.termList li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.termList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--ifm-color-primary);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.termList li:last-child {
+  margin-bottom: 0;
+}
+
+.glossaryFooter {
+  margin-top: 5rem;
+  padding-top: 2.5rem;
+  border-top: 2px solid var(--ifm-color-emphasis-200);
+}
+
+.glossaryFooter h2 {
+  color: var(--ifm-color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.glossaryFooter ul {
+  list-style: none;
+  padding: 0;
+}
+
+.glossaryFooter li {
+  margin-bottom: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.glossaryFooter li::before {
+  content: none;
+  position: absolute;
+  left: 0;
+  color: var(--ifm-color-primary);
+}
